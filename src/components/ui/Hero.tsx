@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight } from 'lucide-react'; // Íconos limpios
 
 // El Hero. Es el primer impacto visual.

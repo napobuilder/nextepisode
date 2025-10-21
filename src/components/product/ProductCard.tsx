@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Product } from '../../data/products';
 import { useCart } from '../../contexts/CartContext';
 

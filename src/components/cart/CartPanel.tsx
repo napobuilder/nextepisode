@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Definimos las props que el componente recibirá
 interface CartPanelProps {
   isOpen: boolean;

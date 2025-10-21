@@ -60,6 +60,7 @@ export const mockProducts: Product[] = [
     type: 'Bundle',
     price: 5.00,
     isBundle: true,
+    imageUrl: 'https://placehold.co/400x400/FCEEED/2E2A3D?text=COMBO',
     description: 'Elige 3 pósters de la colección Ghibli por un precio especial.',
     series: 'Ghibli',
   },

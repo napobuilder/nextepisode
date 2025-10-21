@@ -1,4 +1,3 @@
-import React from 'react';
 import { mockProducts } from '../../data/products';
 import { ProductCard } from '../product/ProductCard';
 

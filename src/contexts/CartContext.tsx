@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import { createContext, useState, useContext, type ReactNode } from 'react';
 import type { Product } from '../data/products';
 
 // Definimos la forma de los items en el carrito (producto + cantidad)

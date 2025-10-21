@@ -1,5 +1,3 @@
-import React from 'react';
-
 // TODO: Recibirá un 'item' como prop con los datos del producto y la cantidad
 export const CartItem = () => {
   return (
