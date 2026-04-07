@@ -107,31 +107,31 @@ export const ProductCard = ({ product }: { product: Product }) => {
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
           </button>
           
-          <div className="relative w-full max-w-3xl flex items-center justify-center">
+          <div className="relative w-full max-w-3xl flex items-center justify-center px-4 md:px-0">
             {images.length > 1 && (
               <button 
-                className="absolute left-0 md:-left-16 p-4 bg-transparent text-white-sakura/50 hover:text-neon-magenta transition-colors focus:outline-none"
+                className="absolute left-2 md:-left-16 p-2 md:p-4 bg-gray-night/60 md:bg-transparent rounded-full text-white-sakura hover:text-neon-magenta hover:bg-gray-night text-opacity-80 transition-all focus:outline-none z-50 backdrop-blur-sm md:backdrop-blur-none"
                 onClick={handlePrev}
                 title="Anterior"
               >
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
               </button>
             )}
             
             <img 
               src={images[currentImgIndex]} 
               alt={`${product.name} vista ${currentImgIndex + 1}`}
-              className="max-h-[85vh] w-auto max-w-full rounded shadow-2xl shadow-black/50 select-none animate-[fadeIn_0.3s_ease-out]"
+              className="max-h-[85vh] w-auto max-w-full rounded shadow-2xl shadow-black/50 select-none animate-[fadeIn_0.3s_ease-out] object-contain"
               onClick={(e) => e.stopPropagation()} 
             />
 
             {images.length > 1 && (
               <button 
-                className="absolute right-0 md:-right-16 p-4 bg-transparent text-white-sakura/50 hover:text-neon-magenta transition-colors focus:outline-none"
+                className="absolute right-2 md:-right-16 p-2 md:p-4 bg-gray-night/60 md:bg-transparent rounded-full text-white-sakura hover:text-neon-magenta hover:bg-gray-night text-opacity-80 transition-all focus:outline-none z-50 backdrop-blur-sm md:backdrop-blur-none"
                 onClick={handleNext}
                 title="Siguiente"
               >
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
               </button>
             )}
           </div>
