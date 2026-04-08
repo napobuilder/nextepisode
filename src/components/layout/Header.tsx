@@ -18,7 +18,7 @@ export const Header = () => {
                     onClick={() => setSearchQuery('')}
                 >
                     <span className="font-display font-black text-xl md:text-2xl tracking-tighter">NEXT EPISODE</span>
-                    <div className="w-2.5 h-2.5 bg-neon-magenta rounded-full hidden md:block"></div>
+                    <div className="w-2.5 h-2.5 bg-neon-magenta rounded-full"></div>
                 </div>
                 
                 {/* Controles: Currency y Carrito */}
