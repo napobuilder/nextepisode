@@ -14,7 +14,10 @@ export const Hero = () => (
       <p className="mt-4 text-lg text-gray-night/80 max-w-lg">
         Merchandise seleccionado con la estética que amas. De Ghibli a Jujutsu Kaisen.
       </p>
-      <button className="mt-8 px-6 py-3 bg-neon-magenta text-white-sakura font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 group">
+      <button 
+        onClick={() => document.getElementById('coleccion')?.scrollIntoView({ behavior: 'smooth' })}
+        className="mt-8 px-6 py-3 bg-neon-magenta text-white-sakura font-bold rounded-full shadow-lg transition-transform transform hover:scale-105 group"
+      >
         Ver Colección <ArrowRight className="inline w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
       </button>
     </div>

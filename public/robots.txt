@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Evita que se indexen rutas de admin si llegas a tenerlas
+# Disallow: /admin
+
+# URL del Sitemap (cuando tengas tu dominio real, cámbialo)
+# Sitemap: https://www.tudominio.com/sitemap.xml

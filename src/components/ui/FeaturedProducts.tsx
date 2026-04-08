@@ -14,7 +14,7 @@ export const FeaturedProducts = () => {
   const displayProducts = searchQuery ? filteredProducts : products.slice(0, 4);
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-16 min-h-[50vh]">
+    <div id="coleccion" className="w-full max-w-6xl mx-auto px-4 py-16 min-h-[50vh]">
       <h2 className="text-3xl font-display text-center mb-8 text-gray-night tracking-tight">
         {searchQuery ? (
           <>

@@ -11,31 +11,18 @@ export const Header = () => {
   return (
     <header className="sticky top-0 bg-white-sakura/90 backdrop-blur-lg z-30 border-b border-gray-night/5">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <div className="flex items-center justify-between gap-2 md:gap-8">
+            <div className="flex flex-wrap items-center justify-between gap-y-3 gap-x-2">
                 {/* Logo */}
-                <div className="flex-shrink-0 flex items-center gap-2 text-gray-night cursor-pointer hover:opacity-80 transition-opacity" onClick={() => setSearchQuery('')}>
+                <div 
+                    className="flex-shrink-0 flex items-center gap-2 text-gray-night cursor-pointer hover:opacity-80 transition-opacity order-1" 
+                    onClick={() => setSearchQuery('')}
+                >
                     <span className="font-display font-black text-xl md:text-2xl tracking-tighter">NEXT EPISODE</span>
                     <div className="w-2.5 h-2.5 bg-neon-magenta rounded-full hidden md:block"></div>
                 </div>
                 
-                {/* Buscador Estilo Cápsula (Pill) */}
-                <div className="flex-1 max-w-2xl mx-1 md:mx-4">
-                    <div className="relative group flex items-center">
-                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-night/40 hidden sm:flex">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        </div>
-                        <input 
-                            type="text" 
-                            placeholder="Buscar en la colección..." 
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full bg-gray-night/5 hover:bg-gray-night/10 font-medium pl-4 sm:pl-10 pr-4 py-2.5 text-sm md:text-base text-gray-night placeholder-gray-night/40 focus:outline-none focus:bg-white-sakura focus:ring-2 focus:ring-neon-magenta/30 transition-all rounded-full shadow-inner"
-                        />
-                    </div>
-                </div>
-                
                 {/* Controles: Currency y Carrito */}
-                <div className="flex-shrink-0 flex items-center gap-1 md:gap-3">
+                <div className="flex-shrink-0 flex items-center gap-1 md:gap-3 order-2 md:order-3">
                     {/* Toggle Divisa */}
                     <div className="flex items-center bg-gray-night/5 p-1 rounded-full text-[10px] sm:text-xs font-bold font-display text-gray-night/50">
                        <button 
@@ -68,6 +55,22 @@ export const Header = () => {
                           </span>
                         )}
                     </button>
+                </div>
+
+                {/* Buscador Estilo Cápsula (Pill) */}
+                <div className="w-full basis-full mt-1 md:mt-0 md:basis-auto md:flex-1 md:max-w-2xl order-3 md:order-2 md:px-6">
+                    <div className="relative group flex items-center">
+                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-night/40">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        <input 
+                            type="text" 
+                            placeholder="Buscar en la colección..." 
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full bg-gray-night/5 hover:bg-gray-night/10 font-medium pl-10 pr-4 py-3 md:py-2.5 text-sm md:text-base text-gray-night placeholder-gray-night/40 focus:outline-none focus:bg-white-sakura focus:ring-2 focus:ring-neon-magenta/30 transition-all rounded-full shadow-inner"
+                        />
+                    </div>
                 </div>
             </div>
             
